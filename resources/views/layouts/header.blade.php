@@ -1,8 +1,8 @@
 <!-- ##### Шапка профиля - начало ##### -->
-<header class="header_area">
+<header class="header_area" style="margin: 0; padding:0;">
         <div class="classy-nav-container breakpoint-off d-flex align-items-center justify-content-between" style="background-color: #d12cc1;">
             <!-- Первое меню -->
-            <nav class="classy-navbar" id="essenceNav">
+            <nav class="classy-navbar" id="essenceNav" style="border-bottom: none;">
                 <!-- Логотип -->
                 <a class="nav-brand" href="{{route('home')}}"><img style="width: 80px;" src="/img/products-img/logo.png" alt=""></a>
                 <!-- Переключатель -->
@@ -18,7 +18,7 @@
                     <!-- Навигация -->
                     <div class="classynav" >
                         <ul>
-                            <li><a href="#" style="color: white;">Pages</a>
+                            <li><a href="#" style="color: black;">Pages</a>
                                 <ul class="dropdown">
                                     <li><a  href="{{route('home')}}">Home</a></li>
                                     <li><a  href="{{route('category')}}">Shop</a></li>
@@ -31,25 +31,25 @@
                                 </ul>
                             </li>
                             
-                                <li><a  style="color: white;"href="#">Shop</a>
-                                <div class="megamenu">
+                                <li><a  style="color: black;"href="#">Shop</a>
+                                
                                     <ul class="single-mega dropdown">
                                         <li style="text-align: center;" class="title">Category</li>
                                         @foreach($categories as $category)
                                         <li><a  href="{{route('showCategory', $category->alias)}}">{{$category->title}}</a></li>
                                         @endforeach
                                     </ul>
-                                </div>
+                                
                             </li>
-                            <li><a style="color: white;" href="{{route('blog')}}">Blog</a></li>
-                            <li><a style="color: white;" href="{{route('contact')}}">Contact</a></li>
+                            <li><a style="color: black;" href="{{route('blog')}}">Blog</a></li>
+                            <li><a style="color: black;" href="{{route('contact')}}">Contact</a></li>
                         </ul>
                     </div>
                     <!-- Навигация конец -->
                 </div>
             </nav>
             <!-- Шапка с кнопками-->
-            <div class="header-meta d-flex clearfix justify-content-end ">
+            <div class="header-meta d-flex clearfix justify-content-end" >
                 <!-- Поиск -->
                 <!-- <div class="search-area">
                     <form action="#" method="post">
@@ -62,16 +62,13 @@
                     <a href="#" ><img src="/img/core-img/heart.svg" alt=""></a>
                 </div> -->
                 <!-- Личный аккаунт -->
-                
-                                <div class="user-login-info ">
-                                    <a href="{{route('accIndex')}}">
-                                        <img src="/img/core-img/user.svg" alt="">
-                                        
-                                    </a>
-                                </div>
-                            
+                <div class="user-login-info ">
+                    <a href="{{route('accIndex')}}">
+                        <img src="/img/core-img/user.svg" alt="">
+                        
+                    </a>
+                </div>      
                 <!-- Корзина -->
-                
                 <div class="cart-area">
                     <a href="#" id="essenceCartBtn"><img src="/img/core-img/bag.svg" alt=""><span style="color: white;">{{\Cart::session(\Illuminate\Support\Facades\Session::getId())->getTotalQuantity();}}</span></a>
                 </div>
@@ -94,7 +91,7 @@
                 @foreach($cart as $item)
                 <div class="single-cart-item"  >
                     <a href="#" class="product-image " >
-                        <img style="height: 200px;" src="/img/products-img/logo.png" class="cart-thumb" alt="">
+                        <img style="height: 200px;" src="" class="cart-thumb" alt="" style="background-color: black;">
                         <!-- Описание товара -->
                         <div class="cart-item-desc mt-2 ">
                             <span style="max-width: 60%;" class="badge">Ksyusha Beauty</span>
@@ -114,7 +111,7 @@
                     </a>
                 </span>
                 <span class="span-my">
-                    <p class="size" style=" font-size: 23px; color:black;">Qty: {{$item->quantity}}</p>
+                    <p class="size p-size" >Qty: {{$item->quantity}}</p>
                 </span>
                 </div>
                 @endforeach

@@ -11,7 +11,11 @@
     /* ---------------------------------------
     ##### - PLACE YOUR CUSTOM CSS HERE - #####
     --------------------------------------- */
-.p-contact span{
+    .p-size{
+        font-size: 23px; 
+        color:black;
+    }
+    .p-contact span{
 
     font-weight: bold;
     color: black;
@@ -219,5 +223,10 @@ a:hover,a:focus{
     .my-div{
         display: block;
         /* background-color: rebeccapurple; */
+    }
+}
+@media screen and (min-width:280px) and (max-width: 584px) {
+    .p-size{
+        font-size: 13px;
     }
 }

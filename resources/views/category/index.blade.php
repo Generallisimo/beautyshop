@@ -78,7 +78,9 @@
                                 <div class="single-product-wrapper">
                                     <!-- Картинка  -->
                                     <div class="product-img">
+                                    <a href="{{route('singleProduct', ['category', $product->id])}}">
                                         <img src="{{asset("/storage/$product->img")}}" alt="">
+                                    </a>
                                         <!-- Наводение на картинку -->
                                         <!-- <img class="hover-img" src="/img/product-img/product-2.jpg" alt=""> -->
 
@@ -88,9 +90,9 @@
                                         </div> -->
                                         
                                         <!-- Избраные -->
-                                        <div class="product-favourite">
+                                        <!-- <div class="product-favourite">
                                             <a href="#" class="favme fa fa-heart"></a>
-                                        </div>
+                                        </div> -->
                                     </div>
                                     <!-- Описание -->
                                     <div class="product-description">
@@ -105,7 +107,7 @@
                                         <div class="hover-content">
                                             <!-- Добавить в избранные -->
                                             <div class="add-to-cart-btn">
-                                                <a href="#" class="btn essence-btn">Add to Cart</a>
+                                                <a href="{{route('addCart', ['id' => $product->id])}}" class="btn essence-btn">Add to Cart</a>
                                             </div>
                                         </div>
                                     </div>

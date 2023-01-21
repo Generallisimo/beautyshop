@@ -6,7 +6,7 @@
 @section('content')
 
     <!-- ##### Товар ##### -->
-    <section  class="single_product_details_area d-flex align-items-center">
+    <section  class="single_product_details_area d-flex align-items-center" style="margin-top: 100px;">
         <!-- Картинка -->
         <div class="single_product_thumb clearfix">
             <div class="">             
@@ -31,11 +31,13 @@
                 <!-- Корзина и избранные -->
                 <div class="cart-fav-box d-flex align-items-center">
                     <!-- Корзина -->
-                    <button type="submit" name="addtocart" value="5" class="btn essence-btn">Add to cart</button>
-                    <!-- Избранные -->
-                    <div class="product-favourite ml-4">
-                        <a href="#" class="favme fa fa-heart"></a>
+                    <div class="add-to-cart-btn">
+                        <a href="{{route('addCart', ['id' => $products->id])}}" class="btn essence-btn">Add to Cart</a>
                     </div>
+                    <!-- Избранные -->
+                    <!-- <div class="product-favourite ml-4">
+                        <a href="#" class="favme fa fa-heart"></a>
+                    </div> -->
                 </div>
             </form>
         </div>

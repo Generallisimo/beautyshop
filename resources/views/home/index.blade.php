@@ -115,13 +115,15 @@
                         <div class="single-product-wrapper">
                             <!-- Картинка -->
                             <div class="product-img">
+                            <a href="{{route('singleProduct', ['category', $product->id])}}">
                                 <img src="{{asset("/storage/$product->img")}}" alt="">
+                            </a>
                                 <!-- Наведение на картинкуу  -->
                                 <!-- <img class="hover-img" src="img/product-img/product-2.jpg" alt=""> -->
                                 <!-- Добавить в избранные -->
-                                <div class="product-favourite">
+                                <!-- <div class="product-favourite">
                                     <a href="#" class="favme fa fa-heart"></a>
-                                </div>
+                                </div> -->
                             </div>
                             <!-- Описание -->
                             <div class="product-description">
@@ -157,7 +159,9 @@
                     <div class="single-product-wrapper">
                         <!-- Картинка  -->
                         <div class="product-img">
-                            <img style="height: 300px;" src="{{asset("/storage/$blog->img")}}" alt="">                                        
+                        <a  href="{{route('blogPage', ['id', $blog->id])}}">
+                            <img style="height: 300px;" src="{{asset("/storage/$blog->img")}}" alt="">
+                        </a>                                        
                         </div>
                         
                         <!-- Описание -->
@@ -182,11 +186,13 @@
                                 <div class="single-product-wrapper">
                                     <!-- Картинка  -->
                                     <div class="product-img">
+                                    <a href="{{route('singleProduct', ['category', $new->id])}}">
                                         <img src="{{asset("/storage/$new->img")}}" alt="">
+                                    </a>
                                         <!-- Избраные -->
-                                        <div class="product-favourite">
+                                        <!-- <div class="product-favourite">
                                             <a href="#" class="favme fa fa-heart"></a>
-                                        </div>
+                                        </div> -->
                                     </div>
                                     <!-- Описание -->
                                     <div class="product-description">
