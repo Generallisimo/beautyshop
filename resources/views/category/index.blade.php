@@ -5,7 +5,7 @@
 <!-- вставляем контент -->
 @section('content')
     <!-- ##### Название категории товара ##### -->
-    <div class="breadcumb_area bg-img" style="background-image: url(img/bg-img/breadcumb.jpg);">
+    <div class="breadcumb_area bg-img" style="background-image: url(/img/bg-img/breadcumb.jpg); margin-top:100px;">
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12">
@@ -19,41 +19,32 @@
     <!-- ##### Конец ##### -->
 
     <!-- ##### Категории ##### -->
+    
     <section class="shop_grid_area section-padding-80">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-md-4 col-lg-2">
-                    <!-- <div class="shop_sidebar_area"> -->
+                <div class="col-12 col-md-4 col-lg-3">
+                    <div class="shop_sidebar_area">
 
                         <!-- ##### Раздел ##### -->
-                        <!-- <div class="widget catagory mb-50"> -->
+                        <div class="widget catagory mb-50">
                             <!-- Название категории -->
                             <!-- <h6 class="widget-title mb-30">Catagories</h6> -->
 
                             <!--  Категории  -->
-                            <!-- <div class="catagories-menu"> -->
-                                <!-- <ul id="menu-content2" class="menu-content collapse show"> -->
+                            <div class="catagories-menu">
+                                <ul id="menu-content2" class="menu-content collapse show">
                                     <!-- Виды категории -->
-                                    <!-- <li data-toggle="collapse" data-target="#clothing">
-                                        <a href="#">clothing</a>
-                                        <ul class="sub-menu collapse show" id="clothing">
+                                    <li data-toggle="collapse" data-target="#clothing">
+                                        <a href="{{route('category')}}">Back to categories</a>
+                                        <!-- <ul class="sub-menu collapse show" id="clothing">
                                             <li><a href="#">All</a></li>
-                                            <li><a href="#">Bodysuits</a></li>
-                                            <li><a href="#">Dresses</a></li>
-                                            <li><a href="#">Hoodies &amp; Sweats</a></li>
-                                            <li><a href="#">Jackets &amp; Coats</a></li>
-                                            <li><a href="#">Jeans</a></li>
-                                            <li><a href="#">Pants &amp; Leggings</a></li>
-                                            <li><a href="#">Rompers &amp; Jumpsuits</a></li>
-                                            <li><a href="#">Shirts &amp; Blouses</a></li>
-                                            <li><a href="#">Shirts</a></li>
-                                            <li><a href="#">Sweaters &amp; Knits</a></li>
-                                        </ul>
+                                        </ul> -->
                                     </li>                                    
                                 </ul>
-                            </div> -->
-                        <!-- </div> -->
-                    <!-- </div> -->
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-12 col-md-8 col-lg-9">
                     <div class="shop_grid_product_area">

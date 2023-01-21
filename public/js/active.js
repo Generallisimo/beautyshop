@@ -10,6 +10,52 @@
 
     // :: Sliders Active Code
     if ($.fn.owlCarousel) {
+        //  brands на главной страницы
+        $('.popular-brands-slides').owlCarousel({
+            items: 5,
+            margin: 30,
+            loop: true,
+            nav: false,
+            dots: false,
+            autoplay: true,
+            autoplayTimeout: 1000,
+            smartSpeed: 1500,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                576: {
+                    items: 2
+                },
+                768: {
+                    items: 3
+                },
+                992: {
+                    items: 4
+                },
+                1103: {
+                    items: 5
+                }
+            }
+        });
+
+        // слайдер первый на главной страницы
+        $('.popular-slides-slides').owlCarousel({
+            items: 1,
+            margin: 30,
+            loop: true,
+            nav: false,
+            dots: false,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            smartSpeed: 3000,
+            responsive: {
+                0: {
+                    items: 1
+                },
+            }
+        });
+
         $('.popular-products-slides').owlCarousel({
             items: 4,
             margin: 30,
@@ -71,9 +117,10 @@
     // :: ScrollUp Active Code
     if ($.fn.scrollUp) {
         $.scrollUp({
+            // меняем цвет кнопки вверх
             scrollSpeed: 1000,
             easingType: 'easeInOutQuart',
-            scrollText: '<i class="fa fa-angle-up" aria-hidden="true"></i>'
+            scrollText: '<div style="color: #d12cc1; background-color:white;  "><i class="fa fa-angle-up" aria-hidden="true"></i></div>'
         });
     }
 

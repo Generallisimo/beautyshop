@@ -11,8 +11,29 @@
     /* ---------------------------------------
     ##### - PLACE YOUR CUSTOM CSS HERE - #####
     --------------------------------------- */
-.ff{
+.p-delete{
+    background-color: #d12cc1;
+    border: 10px #d12cc1 solid;
+    border-radius: 10px;
+    color: white;
+    margin-top: 10px;
+    /* max-width: 35%; */
+}
+.span-my{
+    align-self: center;    
+    margin: 0 auto;
+
+}
+    .ff{
     background-image: url(/img/product-img/fon.webp);
+}
+.img-page{
+    max-width: 100%;
+    margin-top: 100px;    
+    text-align: center;    
+}
+.img-page img{
+    height: 300px;
 }
 /* Аккаунт */
 a:hover,a:focus{

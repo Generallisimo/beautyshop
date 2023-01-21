@@ -72,7 +72,7 @@ class CheckoutController extends Controller
         $order->cart_data = $order->setCartDataAttribute($cart);
         $order->total_sum = $sum;
         // так сразу можно перечислить несолько объектов в один столбец
-        // $order->address = $request->address.' '. $request->post.' '. $request->city.' '. $request->prov;
+        $order->address = $request->address.' '. $request->post.' '. $request->city.' '. $request->prov;
         $order->phone = $request->phone;
         // $order->save(); 
         if($order->save()){

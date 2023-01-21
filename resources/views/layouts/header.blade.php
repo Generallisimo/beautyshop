@@ -1,10 +1,10 @@
 <!-- ##### Шапка профиля - начало ##### -->
 <header class="header_area">
-        <div class="classy-nav-container breakpoint-off d-flex align-items-center justify-content-between">
+        <div class="classy-nav-container breakpoint-off d-flex align-items-center justify-content-between" style="background-color: #d12cc1;">
             <!-- Первое меню -->
             <nav class="classy-navbar" id="essenceNav">
                 <!-- Логотип -->
-                <a class="nav-brand" href="{{route('home')}}"><img src="/img/core-img/logo.png" alt=""></a>
+                <a class="nav-brand" href="{{route('home')}}"><img style="width: 80px;" src="/img/products-img/logo.png" alt=""></a>
                 <!-- Переключатель -->
                 <div class="classy-navbar-toggler">
                     <span class="navbarToggler"><span></span><span></span><span></span></span>
@@ -16,32 +16,32 @@
                         <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
                     </div>
                     <!-- Навигация -->
-                    <div class="classynav">
+                    <div class="classynav" >
                         <ul>
-                            <li><a href="#">Pages</a>
+                            <li><a href="#" style="color: white;">Pages</a>
                                 <ul class="dropdown">
-                                    <li><a href="{{route('home')}}">Home</a></li>
-                                    <li><a href="{{route('category')}}">Shop</a></li>
+                                    <li><a  href="{{route('home')}}">Home</a></li>
+                                    <li><a  href="{{route('category')}}">Shop</a></li>
                                     <!-- <li><a href="single-product-details.html">Product Details</a></li> -->
-                                    <li><a href="checkout.html">Checkout</a></li>
-                                    <li><a href="blog.html">Blog</a></li>
+                                    <li><a  href="checkout.html">Checkout</a></li>
+                                    <li><a  href="{{route('blog')}}">Blog</a></li>
                                     <!-- <li><a href="single-blog.html">Single Blog</a></li> -->
                                     <!-- <li><a href="regular-page.html">Regular Page</a></li> -->
-                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a  href="contact.html">Contact</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">Shop</a>
+                            <li><a  style="color: white;"href="#">Shop</a>
                                 <div class="megamenu">
                                     <ul class="single-mega dropdown">
-                                        <li class="title">Category</li>
+                                        <li style="text-align: center;" class="title">Category</li>
                                         @foreach($categories as $category)
-                                        <li><a href="{{route('showCategory', $category->alias)}}">{{$category->title}}</a></li>
+                                        <li><a  href="{{route('showCategory', $category->alias)}}">{{$category->title}}</a></li>
                                         @endforeach
                                     </ul>
                                 </div>
                             </li>
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a style="color: white;" href="{{route('blog')}}">Blog</a></li>
+                            <li><a style="color: white;" href="contact.html">Contact</a></li>
                         </ul>
                     </div>
                     <!-- Навигация конец -->
@@ -50,23 +50,23 @@
             <!-- Шапка с кнопками-->
             <div class="header-meta d-flex clearfix justify-content-end ">
                 <!-- Поиск -->
-                <div class="search-area">
+                <!-- <div class="search-area">
                     <form action="#" method="post">
                         <input type="search" name="search" id="headerSearch" placeholder="Type for search">
                         <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
                     </form>
-                </div>
+                </div> -->
                 <!-- Избранные -->
-                <div class="favourite-area">
+                <!-- <div class="favourite-area">
                     <a href="#" ><img src="/img/core-img/heart.svg" alt=""></a>
-                </div>
+                </div> -->
                 <!-- Личный аккаунт -->
                 <div class="user-login-info">
                     <a href="{{route('accIndex')}}"><img src="/img/core-img/user.svg" alt=""></a>
                 </div>
                 <!-- Корзина -->
                 <div class="cart-area">
-                    <a href="#" id="essenceCartBtn"><img src="/img/core-img/bag.svg" alt=""><span>{{\Cart::session(\Illuminate\Support\Facades\Session::getId())->getTotalQuantity();}}</span></a>
+                    <a href="#" id="essenceCartBtn"><img src="/img/core-img/bag.svg" alt=""><span style="color: white;">{{\Cart::session(\Illuminate\Support\Facades\Session::getId())->getTotalQuantity();}}</span></a>
                 </div>
             </div>
         </div>
@@ -77,26 +77,37 @@
     <div class="right-side-cart-area">
         <!-- Кнопка корзины -->
         <div class="cart-button">
-            <a href="#" id="rightSideCart"><img class="mt-4" src="/img/core-img/bag.svg" alt=""> <span>{{\Cart::session(\Illuminate\Support\Facades\Session::getId())->getTotalQuantity();}}</span></a>
+            <a href="#" id="rightSideCart"><img  class="mt-4" src="/img/core-img/bag.svg" alt=""> <span style="color: #d12cc1;" >{{\Cart::session(\Illuminate\Support\Facades\Session::getId())->getTotalQuantity();}}</span></a>
         </div>
         <div class="cart-content d-flex">
             <!-- Лист товаров -->
             <div class="cart-list">
                 <!-- Товар -->
                 @foreach($cart as $item)
-                <div class="single-cart-item ff">
+                <div class="single-cart-item"  >
                     <a href="#" class="product-image " >
-                        <!-- <img src="/img/product-img/fon.webp" class="cart-thumb" alt=""> -->
+                        <img style="height: 200px;" src="/img/products-img/logo.png" class="cart-thumb" alt="">
                         <!-- Описание товара -->
-                        <div class="cart-item-desc">
-                          <span class="product-remove"><a href="{{route('removeCart', ['id' => $item->id])}}"><i class="fa fa-close" aria-hidden="true"></i></a></span>
-                            <span class="badge">Ksyusha Beauty</span>
-                            <h6>{{$item->name}}</h6>
+                        <div class="cart-item-desc mt-2 ">
+                            <span style="max-width: 60%;" class="badge">Ksyusha Beauty</span>
+                            <h6 style="font-size: 20px;">{{$item->name}}</h6>
                             <!-- <p class="size">Size: S</p> -->
-                            <p class="size">Qty: {{$item->quantity}}</p>
+                            
                             <p class="price">${{$item->price}}</p>
                         </div>
                     </a>
+                </div>
+                <div style="display:flex;">
+                <!-- удаление товара -->
+                <span class="product-remove" style="    margin: 0 auto;">
+                    <a style=" text-decoration: none;"  href="{{route('removeCart', ['id' => $item->id])}}">
+                        <!-- <i  class=" fa fa-close" aria-hidden="true"></i> -->
+                        <p class="p-delete">Delete</p>
+                    </a>
+                </span>
+                <span class="span-my">
+                    <p class="size" style=" font-size: 23px; color:black;">Qty: {{$item->quantity}}</p>
+                </span>
                 </div>
                 @endforeach
             </div>
@@ -110,7 +121,7 @@
                     <li><span>total:</span> <span>${{$sum}}</span></li>
                 </ul>
                 <div class="checkout-btn mt-100">
-                    <a href="{{route('checkOut')}}" class="btn essence-btn">check out</a>
+                    <a style="background-color: #d12cc1;" href="{{route('checkOut')}}" class="btn essence-btn">check out</a>
                 </div>
             </div>
         </div>

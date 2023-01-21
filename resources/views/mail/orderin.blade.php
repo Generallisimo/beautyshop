@@ -1,8 +1,9 @@
-<h2>Поступил новый заказ</h2>
-<h2>Клиент:</h2>
+<h2>New order received</h2>
+<h2>Client:</h2>
 <p>
     name: {{$user['name']}} <br>
-    email: {{$user['email']}}
+    email: {{$user['email']}}<br>
+    phone: {{$user['phone']}}
 </p>
 
                         <div class="cart-page-heading">

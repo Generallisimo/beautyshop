@@ -9,7 +9,7 @@ class SingleProductController extends Controller
 {
     public function singleProduct($cat,  $product_id){
         $products =Product::where('id', $product_id)->first();
-        // dd($products);
+        // dd($product_id);
         return view('products.singleproduct', [
             'products' => $products,
         ]);   

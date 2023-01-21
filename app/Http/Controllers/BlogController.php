@@ -2,41 +2,39 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
-use App\Models\Product;
+use App\Models\Blog;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Darryldecode\Cart\Facades\CartFacade as Cart;
 
-class CategoryController extends Controller
+class BlogController extends Controller
 {
-    public function showCategory($cat_alias){
+    public function blog(){
         $sessionId=Session::getId();
         Cart::session($sessionId); 
         $cart=Cart::getContent();
         $sum = Cart::getTotal('price');
 
-        $cat = Category::where('alias',$cat_alias)->first();
-        $products = Product::where('category_id', $cat->id)->paginate(9);
-        // dd($products);
-        return view('category.index', [
-            'cat'=>$cat,
-            'products'=>$products,
+        $blogs = Blog::orderBy('id')->get();
+        return view('blog.index', [
             'cart'=>$cart,
             'sum'=>$sum,
+            'blogs'=>$blogs,
         ]);
     }
-    public function category(){
+    public function blogPage($cat, $blog){
         $sessionId=Session::getId();
         Cart::session($sessionId); 
         $cart=Cart::getContent();
         $sum = Cart::getTotal('price');
-
-        $products = Product::orderBy('id')->paginate(9);
-        return view('category.indexs', [
-            'products'=>$products,
+        
+        $blogs = Blog::where('id', $blog)->get();
+        // dd($blogs);
+        // $items = Blog::where('id', $blogs)->get();
+        return view('blog.page', [
             'cart'=>$cart,
             'sum'=>$sum,
+            'blogs'=>$blogs,
         ]);
     }
 }

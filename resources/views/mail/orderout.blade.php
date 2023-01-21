@@ -1,4 +1,4 @@
-<h2>{{$user['name']}}, Ваш заказ принят</h2>
+<h2>{{$user['name']}}, Your order is accepted</h2>
 
 
                         <div class="cart-page-heading">

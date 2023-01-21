@@ -1,5 +1,5 @@
     <!-- ##### Футер - начало ##### -->
-    <footer class="footer_area clearfix">
+    <footer class="footer_area clearfix" style="background-color: #d12cc1;">
         <div class="container">
             <div class="row">
                 <!-- Переход на другие категории -->
@@ -35,7 +35,7 @@
             </div>
             <div class="row align-items-end">
                 <!-- Подписка на рассылку -->
-                <div class="col-12 col-md-6">
+                <!-- <div class="col-12 col-md-6">
                     <div class="single_widget_area">
                         <div class="footer_heading mb-30">
                             <h6>Subscribe</h6>
@@ -47,7 +47,7 @@
                             </form>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- Иконки соц сетей -->
                 <div class="col-12 col-md-6">
                     <div class="single_widget_area">
@@ -64,8 +64,8 @@
             <!-- Копирайт -->
             <div class="row mt-5">
                 <div class="col-md-12 text-center">
-                    <p>                                        
-                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>        
+                    <p style="color: white;">                                        
+                    Copyright<i class="fa fa-heart-o" aria-hidden="true"></i> by Ksyusha      
                     </p>
                 </div>
             </div>

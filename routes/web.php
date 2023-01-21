@@ -18,6 +18,8 @@ Route::get('/', [\App\Http\Controllers\HomeController::class, 'home'])->name('ho
 Route::get('/category', [\App\Http\Controllers\CategoryController::class, 'category'])->name('category');
 Route::get('/category/{cat}', [\App\Http\Controllers\CategoryController::class, 'showCategory'])->name('showCategory');
 Route::get('/category/{cat}/{product_id}', [\App\Http\Controllers\SingleProductController::class, 'singleProduct'])->name('singleProduct');
+Route::get('/blog', [\App\Http\Controllers\BlogController::class, 'blog'])->name('blog');
+Route::get('/blog/{cat}/{blog}', [\App\Http\Controllers\BlogController::class, 'blogPage'])->name('blogPage');
 // Корзина
 Route::get('/addcart/{id}', [\App\Http\Controllers\CartController::class, 'addCart'])->name('addCart');
 Route::get('/removecart/{id}', [\App\Http\Controllers\CartController::class, 'removeCart'])->name('removeCart');

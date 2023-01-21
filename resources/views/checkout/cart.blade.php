@@ -74,32 +74,12 @@
                                 </div>
                             </div>
                             
-                            <div class="order-details-confirmation">
-                    <!-- товары которые добавили в карзину -->
-                        <div class="cart-page-heading">
-                            <h5>Your History</h5>
-                            <p>The Details</p>
-                        </div>
-                        <!-- так выводим историю -->
-                    @foreach($orders as $order)
-                        <ul class="order-details-form mb-4">
-                            <!-- так мы выложили его в массив вы водим через цикл (order) -->
-                        @foreach($order->cart_data as $cart_data)
-                            <li><span>Product:</span> <span>{{$cart_data['name']}}</span></li>                            
-                            <li><span>Subtotal:</span> <span>${{$cart_data['price']}}</span></li>
-                            <li><span>Quantity:</span> <span>{{$cart_data['quantity']}}</span></li>
-                            <br><li><span>Total</span> <span>${{$cart_data['price'] * $cart_data['quantity']}}</span></li>
-                        @endforeach
-                            <!-- общая сумма это лежит не в массиве -->
-                            <br><li><span>FullTotal</span> <span>${{$order ['total_sum']}}</span></li>
-                        </ul>
-                    @endforeach
-                    </div>
-                    </div>
+                            
                 </div>
+            </div>
 
                 <div class="col-12 col-md-6 col-lg-5 ml-lg-auto">
-                    <div class="order-details-confirmation">
+                    <div class="order-details-confirmation mb-5">
                     <!-- товары которые добавили в карзину -->
                         <div class="cart-page-heading">
                             <h5>Your Order</h5>
@@ -172,6 +152,28 @@
                                 <button type="submit">Get</button>
                             </div>
                     </div>
+                    @foreach($orders as $order)
+                    <div class="order-details-confirmation  mb-3">
+                    <!-- товары которые добавили в карзину -->
+                        <div class="cart-page-heading">
+                            <h5>Your History</h5>
+                            <p>The Details</p>
+                        </div>
+                        
+                        <!-- так выводим историю -->
+                        <ul class="order-details-form mb-4">
+                            <!-- так мы выложили его в массив вы водим через цикл (order) -->
+                                @foreach($order->cart_data as $cart_data)
+                            <li><span>Product:</span> <span>{{$cart_data['name']}}</span></li>                            
+                            <li><span>Subtotal:</span> <span>${{$cart_data['price']}}</span></li>
+                            <li><span>Quantity:</span> <span>{{$cart_data['quantity']}}</span></li>
+                            <br><li><span>Total</span> <span>${{$cart_data['price'] * $cart_data['quantity']}}</span></li>
+                                 @endforeach
+                            <!-- общая сумма это лежит не в массиве -->
+                            <br><li><span>FullTotal</span> <span>${{$order ['total_sum']}}</span></li>
+                        </ul>
+                    </div>
+                    @endforeach
                 </div>
             </div>
             </form>
