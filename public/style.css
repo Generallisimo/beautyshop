@@ -11,7 +11,8 @@
     /* ---------------------------------------
     ##### - PLACE YOUR CUSTOM CSS HERE - #####
     --------------------------------------- */
-.p-delete{
+
+    .p-delete{
     background-color: #d12cc1;
     border: 10px #d12cc1 solid;
     border-radius: 10px;
@@ -41,11 +42,12 @@ a:hover,a:focus{
  text-decoration: none;
 }
 .tab{
- background: #200122;
+ background: #fabbf4;
  background: -webkit-linear-gradient(to bottom, #6f0000, #200122);
  background: linear-gradient(to bottom, #6f0000, #200122);
  padding: 40px 50px;
  position: relative;
+ border-radius: 10px;
 }
 .tab:before{
  content: "";
@@ -55,8 +57,9 @@ a:hover,a:focus{
  position: absolute;
  top: 0;
  left: 0;
- background: linear-gradient(#2e3a6a,#2f0b45);
+ background: #fabbf4;
  opacity: 0.85;
+ border-radius: 10px;
 }
 .tab .nav-tabs{
  border-bottom: none;
@@ -85,7 +88,7 @@ a:hover,a:focus{
  border: none;
  background: transparent;
  opacity: 1;
- border-bottom: 2px solid #eec111;
+ border-bottom: 2px solid #d12cc1;
  color: #fff;
 }
 .tab .tab-content{
@@ -118,17 +121,17 @@ a:hover,a:focus{
 }
 .form-horizontal .form-group label{
  padding: 0 20px;
- color: #7f8291;
+ color: white;
  text-transform: capitalize;
  margin-bottom: 10px;
 }
 .form-horizontal .main-checkbox{
  width: 20px;
  height: 20px;
- background: #eec111;
+ background: #d12cc1;
  float: left;
  margin: 5px 0 0 20px;
- border: 1px solid #eec111;
+ border: 1px solid #d12cc1;
  position: relative;
 }
 .form-horizontal .main-checkbox label{
@@ -168,19 +171,19 @@ a:hover,a:focus{
 }
 .form-horizontal .btn{
  width: 100%;
- background: #eec111;
+ background: white;
  padding: 10px 20px;
  border: none;
  font-size: 14px;
  font-weight: bold;
- color: #fff;
+ color: #d12cc1;
  border-radius: 20px;
  text-transform: uppercase;
  margin: 20px 0 30px 0;
 }
 .form-horizontal .btn:focus{
- background: #eec111;
- color: #fff;
+ background: white;
+ color: #d12cc1;
  outline: none;
  box-shadow: none;
 }
@@ -193,11 +196,12 @@ a:hover,a:focus{
  width: auto;
  background: transparent;
  margin: 30px 0 0 0;
- color: #615f6c;
+ color: white;
  text-transform: capitalize;
  transition: all 0.3s ease 0s;
 }
-.form-horizontal .forgot-pass .btn:hover{ color: #eec111; }
+.form-horizontal .forgot-pass .btn:hover{ color: white; }
 @media only screen and (max-width: 479px){
  .tab{ padding: 40px 20px; }
 }
+

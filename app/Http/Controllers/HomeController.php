@@ -9,10 +9,12 @@ use App\Models\Slide;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Darryldecode\Cart\Facades\CartFacade as Cart;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
     public function home(){
+        $user=Auth::user();
         $sessionId=Session::getId();
         Cart::session($sessionId); 
         $cart=Cart::getContent();
@@ -25,6 +27,7 @@ class HomeController extends Controller
         $brands = Brand::orderBy('id')->get();
         $slides = Slide::orderBy('id')->get();
         // dd($products);
+        
         return view('home.index', [
             'products'=>$products,
             'cart'=>$cart,
@@ -33,6 +36,7 @@ class HomeController extends Controller
             'blogs'=>$blogs,
             'news'=>$news,
             'slides'=>$slides,
+            'user'=>$user
         ]);
     }
     

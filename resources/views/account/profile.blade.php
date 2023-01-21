@@ -51,21 +51,21 @@
                         </form> -->
 
                         <!-- Панель аутентификации -->
-                        <form method="POST" action="{{ route('login') }}">
+                        <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                             @csrf
 
                             <!-- Email Address -->
-                            <div>
-                                <x-input-label for="email" :value="__('Email')" />
-                                <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
-                                <x-input-error :messages="$errors->get('email')" class="mt-2" />
+                            <div class="form-group">
+                                <x-input-label class="" for="email" :value="__('Email')" />
+                                <x-text-input  id="email" class="block mt-1 w-full form-control" type="email" name="email" :value="old('email')" required autofocus />
+                                <x-input-error :messages="$errors->get('email')" class="mt-2 " />
                             </div>
 
                             <!-- Password -->
-                            <div class="mt-4">
+                            <div class="form-group">
                                 <x-input-label for="password" :value="__('Password')" />
 
-                                <x-text-input id="password" class="block mt-1 w-full"
+                                <x-text-input id="password" class="block mt-1 w-full form-control"
                                                 type="password"
                                                 name="password"
                                                 required autocomplete="current-password" />
@@ -74,22 +74,24 @@
                             </div>
 
                             <!-- Remember Me -->
-                            <div class="block mt-4">
+                            <div class="block mt-4 form-group">
                                 <label for="remember_me" class="inline-flex items-center">
                                     <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
                                     <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
                                 </label>
                             </div>
 
-                            <div class="flex items-center justify-end mt-4">
-                                @if (Route::has('password.request'))
-                                    <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
+                            <div class="flex items-center justify-end mt-4 form-group ">
+                                <!-- @if (Route::has('password.request'))
+                                    <a class="btn btn-default" href="{{ route('password.request') }}">
                                         {{ __('Forgot your password?') }}
                                     </a>
-                                @endif
+                                @endif -->
 
-                                <x-primary-button class="ml-3">
+                                <x-primary-button class="btn btn-default">
+                                <a style="color: #d12cc1;">
                                     {{ __('Log in') }}
+                                </a>
                                 </x-primary-button>
                             </div>
                         </form>
@@ -119,28 +121,28 @@
                         </form> -->
 
                         <!-- Панель регестрации с помощью контроллеров -->
-                        <form method="POST" action="{{ route('register') }}">
+                        <form method="POST" action="{{ route('register') }}" class="form-horizontal">
                             @csrf
 
                             <!-- Name -->
-                            <div>
-                                <x-input-label for="name" :value="__('Name')" />
-                                <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
-                                <x-input-error :messages="$errors->get('name')" class="mt-2" />
+                            <div class="form-group">
+                                <x-input-label  for="name" :value="__('Name')" />
+                                <x-text-input id="name" class="block mt-1 w-full form-control" type="text" name="name" :value="old('name')" required autofocus />
+                                <x-input-error :messages="$errors->get('name')" class="form-group " />
                             </div>
 
                             <!-- Email Address -->
-                            <div class="mt-4">
+                            <div class="form-group">
                                 <x-input-label for="email" :value="__('Email')" />
-                                <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
+                                <x-text-input id="email" class="block mt-1 w-full form-control" type="email" name="email" :value="old('email')" required />
                                 <x-input-error :messages="$errors->get('email')" class="mt-2" />
                             </div>
 
                             <!-- Password -->
-                            <div class="mt-4">
+                            <div class="form-group">
                                 <x-input-label for="password" :value="__('Password')" />
 
-                                <x-text-input id="password" class="block mt-1 w-full"
+                                <x-text-input id="password" class="block mt-1 w-full form-control"
                                                 type="password"
                                                 name="password"
                                                 required autocomplete="new-password" />
@@ -149,23 +151,25 @@
                             </div>
 
                             <!-- Confirm Password -->
-                            <div class="mt-4">
+                            <div class="form-group">
                                 <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
 
-                                <x-text-input id="password_confirmation" class="block mt-1 w-full"
+                                <x-text-input id="password_confirmation" class="block mt-1 w-full form-control"
                                                 type="password"
                                                 name="password_confirmation" required />
 
                                 <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
                             </div>
 
-                            <div class="flex items-center justify-end mt-4">
-                                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
+                            <div class="flex items-center justify-end mt-4  form-group">
+                                <a class="btn-default btn " href="{{ route('login') }}">
                                     {{ __('Already registered?') }}
                                 </a>
 
-                                <x-primary-button class="ml-4">
+                                <x-primary-button class=" btn-default btn">
+                                    <a style="color: #d12cc1;">
                                     {{ __('Register') }}
+                                    </a>
                                 </x-primary-button>
                             </div>
                         </form>

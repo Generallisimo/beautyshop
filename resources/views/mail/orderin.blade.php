@@ -3,7 +3,7 @@
 <p>
     name: {{$user['name']}} <br>
     email: {{$user['email']}}<br>
-    phone: {{$user['phone']}}
+    
 </p>
 
                         <div class="cart-page-heading">

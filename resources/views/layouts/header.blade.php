@@ -30,7 +30,8 @@
                                     <li><a  href="contact.html">Contact</a></li>
                                 </ul>
                             </li>
-                            <li><a  style="color: white;"href="#">Shop</a>
+                            
+                                <li><a  style="color: white;"href="#">Shop</a>
                                 <div class="megamenu">
                                     <ul class="single-mega dropdown">
                                         <li style="text-align: center;" class="title">Category</li>
@@ -61,8 +62,32 @@
                     <a href="#" ><img src="/img/core-img/heart.svg" alt=""></a>
                 </div> -->
                 <!-- Личный аккаунт -->
-                <div class="user-login-info">
-                    <a href="{{route('accIndex')}}"><img src="/img/core-img/user.svg" alt=""></a>
+                <div class="classy-menu">
+                    <!-- Закрытие -->
+                    <div class="classycloseIcon">
+                        <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                    </div>
+
+                    <div class="classynav" >
+                        <ul>
+                            <li>
+                                <div class="user-login-info ">
+                                    <a href="{{route('accIndex')}}">
+                                        <img src="/img/core-img/user.svg" alt="">
+                                        <ul class="dropdown" style="width: 100px;">
+                                            <p></p>
+                                            <form method="POST" action="{{ route('logout') }}">
+                                            @csrf
+                                            <button type="submit" class="btn btn-primary">
+                                                {{ __('Log Out') }}
+                                            </button>
+                                            </form>
+                                        </ul>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <!-- Корзина -->
                 <div class="cart-area">
