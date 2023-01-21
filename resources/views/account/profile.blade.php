@@ -131,6 +131,22 @@
                                 <x-input-error :messages="$errors->get('name')" class="form-group " />
                             </div>
 
+                            <div class="form-group">
+                                <x-input-label  for="lastname" :value="__('LastName')" />
+                                <x-text-input id="lastname" class="block mt-1 w-full form-control" type="text" name="lastname" :value="old('lastname')" required autofocus />
+                                <x-input-error :messages="$errors->get('lastname')" class="form-group " />
+                            </div>
+                            <div class="form-group">
+                                <x-input-label  for="address" :value="__('Address')" />
+                                <x-text-input id="address" class="block mt-1 w-full form-control" type="text" name="address" :value="old('address')" required autofocus />
+                                <x-input-error :messages="$errors->get('address')" class="form-group " />
+                            </div>
+                            <div class="form-group">
+                                <x-input-label  for="phone" :value="__('Phone')" />
+                                <x-text-input id="phone" class="block mt-1 w-full form-control" type="text" name="phone" :value="old('phone')" required autofocus />
+                                <x-input-error :messages="$errors->get('phone')" class="form-group " />
+                            </div>
+
                             <!-- Email Address -->
                             <div class="form-group">
                                 <x-input-label for="email" :value="__('Email')" />

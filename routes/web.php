@@ -20,6 +20,7 @@ Route::get('/category/{cat}', [\App\Http\Controllers\CategoryController::class, 
 Route::get('/category/{cat}/{product_id}', [\App\Http\Controllers\SingleProductController::class, 'singleProduct'])->name('singleProduct');
 Route::get('/blog', [\App\Http\Controllers\BlogController::class, 'blog'])->name('blog');
 Route::get('/blog/{cat}/{blog}', [\App\Http\Controllers\BlogController::class, 'blogPage'])->name('blogPage');
+Route::get('/contact', [\App\Http\Controllers\ContactController::class, 'contact'])->name('contact');
 // Корзина
 Route::get('/addcart/{id}', [\App\Http\Controllers\CartController::class, 'addCart'])->name('addCart');
 Route::get('/removecart/{id}', [\App\Http\Controllers\CartController::class, 'removeCart'])->name('removeCart');

@@ -16,7 +16,7 @@
     </div>
     <div class="col-md-6">
       <label for="inputLastName5" class="form-label">Last Name</label>
-      <input type="name" class="form-control" id="inputLastName5">
+      <input type="name" class="form-control" id="inputLastName5" value="{{$user->lastname}}">
     </div>
     <div class="col-12">
       <label for="inputEmail4" class="form-label">Email</label>
@@ -24,30 +24,30 @@
     </div>
     <div class="col-12">
       <label for="inputAddress" class="form-label">Address</label>
-      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+      <input type="text" class="form-control" id="inputAddress" value="{{$user->address}}">
     </div>
-    <div class="col-md-6">
+    <!-- <div class="col-md-6">
       <label for="inputCity" class="form-label">City</label>
       <input type="text" class="form-control" id="inputCity">
-    </div>
+    </div> -->
     <div class="col-md-6">
       <label for="inputPhone" class="form-label">Phone</label>
-      <input type="text" class="form-control" id="inputPhone">
+      <input type="text" class="form-control" id="inputPhone" value="{{$user->phone}}">
     </div>
-    <div class="col-md-2">
+    <!-- <div class="col-md-2">
       <label for="inputZip" class="form-label">Zip</label>
       <input type="text" class="form-control" id="inputZip">
-    </div>
-    <div class="col-md-2">
+    </div> -->
+    <!-- <div class="col-md-2">
       <label for="inputState" class="form-label">State</label>
       <input type="text" class="form-control" id="inputState">
-    </div>
+    </div> -->
   </form>
 <!-- разлогирование на сайте через личный кабинет -->
   <div class="col-12 mt-2">
-    <form method="POST" action="{{ route('logout') }}">
+    <form method="POST" action="{{ route('logout') }}" style="text-align: center; margin-top:10px;">
     @csrf
-      <button type="submit" class="btn btn-primary">
+      <button type="submit" class="btn btn-primary" style="background-color: #d12cc1; border: #d12cc1;">
         {{ __('Log Out') }}
       </button>
     </form>

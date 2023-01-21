@@ -7,14 +7,14 @@
                     <div class="single_widget_area d-flex mb-30">
                         <!-- Логотип -->
                         <div class="footer-logo mr-50">
-                            <a href="#"><img src="/img/core-img/logo2.png" alt=""></a>
+                            <a href="{{route('home')}}"><img style="width: 80px;" src="/img/products-img/logo.png" alt=""></a>
                         </div>
                         <!-- Меню -->
                         <div class="footer_menu">
                             <ul>
-                                <li><a href="shop.html">Shop</a></li>
-                                <li><a href="blog.html">Blog</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="{{route('category')}}">Shop</a></li>
+                                <li><a href="{{route('blog')}}">Blog</a></li>
+                                <li><a href="{{route('contact')}}">Contact</a></li>
                             </ul>
                         </div>
                     </div>

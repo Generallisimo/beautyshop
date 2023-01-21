@@ -11,7 +11,11 @@
     /* ---------------------------------------
     ##### - PLACE YOUR CUSTOM CSS HERE - #####
     --------------------------------------- */
+.p-contact span{
 
+    font-weight: bold;
+    color: black;
+}
     .p-delete{
     background-color: #d12cc1;
     border: 10px #d12cc1 solid;
@@ -204,4 +208,16 @@ a:hover,a:focus{
 @media only screen and (max-width: 479px){
  .tab{ padding: 40px 20px; }
 }
+@media screen and (min-width:1413px) {
+    .my-div{
+        display: flex;
+        /* background-color: rebeccapurple; */
+    }
+}
 
+@media screen and (min-width:280px) and (max-width:1413px) {
+    .my-div{
+        display: block;
+        /* background-color: rebeccapurple; */
+    }
+}

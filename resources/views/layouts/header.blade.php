@@ -23,11 +23,11 @@
                                     <li><a  href="{{route('home')}}">Home</a></li>
                                     <li><a  href="{{route('category')}}">Shop</a></li>
                                     <!-- <li><a href="single-product-details.html">Product Details</a></li> -->
-                                    <li><a  href="checkout.html">Checkout</a></li>
+                                    <li><a  href="{{route('checkOut')}}">Checkout</a></li>
                                     <li><a  href="{{route('blog')}}">Blog</a></li>
                                     <!-- <li><a href="single-blog.html">Single Blog</a></li> -->
                                     <!-- <li><a href="regular-page.html">Regular Page</a></li> -->
-                                    <li><a  href="contact.html">Contact</a></li>
+                                    <li><a  href="{{route('contact')}}">Contact</a></li>
                                 </ul>
                             </li>
                             
@@ -42,7 +42,7 @@
                                 </div>
                             </li>
                             <li><a style="color: white;" href="{{route('blog')}}">Blog</a></li>
-                            <li><a style="color: white;" href="contact.html">Contact</a></li>
+                            <li><a style="color: white;" href="{{route('contact')}}">Contact</a></li>
                         </ul>
                     </div>
                     <!-- Навигация конец -->
@@ -62,37 +62,20 @@
                     <a href="#" ><img src="/img/core-img/heart.svg" alt=""></a>
                 </div> -->
                 <!-- Личный аккаунт -->
-                <div class="classy-menu">
-                    <!-- Закрытие -->
-                    <div class="classycloseIcon">
-                        <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
-                    </div>
-
-                    <div class="classynav" >
-                        <ul>
-                            <li>
+                
                                 <div class="user-login-info ">
                                     <a href="{{route('accIndex')}}">
                                         <img src="/img/core-img/user.svg" alt="">
-                                        <ul class="dropdown" style="width: 100px;">
-                                            <p></p>
-                                            <form method="POST" action="{{ route('logout') }}">
-                                            @csrf
-                                            <button type="submit" class="btn btn-primary">
-                                                {{ __('Log Out') }}
-                                            </button>
-                                            </form>
-                                        </ul>
+                                        
                                     </a>
                                 </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                            
                 <!-- Корзина -->
+                
                 <div class="cart-area">
                     <a href="#" id="essenceCartBtn"><img src="/img/core-img/bag.svg" alt=""><span style="color: white;">{{\Cart::session(\Illuminate\Support\Facades\Session::getId())->getTotalQuantity();}}</span></a>
                 </div>
+                
             </div>
         </div>
     </header>
