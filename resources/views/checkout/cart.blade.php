@@ -54,7 +54,7 @@
                                 </div>
                                 <div class="col-12 mb-3">
                                     <label for="street_address">Address <span>*</span></label>
-                                    <input name="address" type="text" class="form-control mb-3" id="street_address" value="" required>                                    
+                                    <input name="address" type="text" class="form-control mb-3" id="street_address" value="{{$user->address}}" required>                                    
                                 </div>
                                 <div class="col-12 mb-3">
                                     <label for="postcode">Postcode <span>*</span></label>
@@ -70,7 +70,7 @@
                                 </div>
                                 <div class="col-12 mb-3">
                                     <label for="phone_number">Phone No <span>*</span></label>
-                                    <input name="phone" type="number" class="form-control" id="phone" min="0" value="" required>
+                                    <input name="phone" type="text" class="form-control" id="phone" min="0" value="{{$user->phone}}" required>
                                 </div>
                             </div>
                             

@@ -101,7 +101,7 @@
                                         <a href="{{route('singleProduct', ['category', $product->id])}}">                                        
                                             <h6>{{$product->title}}</h6>
                                         </a>
-                                        <p class="product-price"> {{$product->price}}</p>
+                                        <p class="product-price">$ {{$product->price}}</p>
 
                                         <!-- Контент когда наводишь  -->
                                         <div class="hover-content">
